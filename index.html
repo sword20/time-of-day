@@ -87,6 +87,7 @@
     </footer>
 	<!-- END Footer -->
 	<script>
+		{
 		let myDate = new Date();
 		let myHours = myDate.getHours();
 		let myGreeting = "";
@@ -102,8 +103,8 @@
 
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
-
-		$( document ).ready(function() {  
+	}
+		$(document).ready(function() {  
     SetImage();
     window.setInterval(SetImage,1000);
 });
