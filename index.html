@@ -98,21 +98,21 @@
 		let myHours = myDate.getHours();
 		let myGreeting = "";
 		let myColor = "";
-		let myImage = "";
 
 		if(myHours > 12){
 		myGreeting = "Good Afternoon!";
 		myColor = "orange";
-		myImage = "#night";
+		('#day').show();
+        ('#night').hide();
 		}else{
 		myGreeting = "Good Morning?";
 		myColor = "yellow";
-		myImage = "#day";
+		('#day').hide();
+        ('#night').show();
 		}
 
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
-		document.SetImage() = myImage;
 	
 	</script>
 </body>
