@@ -97,31 +97,21 @@
 		let myHours = myDate.getHours();
 		let myGreeting = "";
 		let myColor = "";
+		let myImage = "";
 
 		if(myHours >12){
 		myGreeting = "Good Afternoon!";
 		myColor = "orange";
+		myImage = src="https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png";
 		}else{
 		myGreeting = "Good Morning?";
 		myColor = "yellow";
+		myImage = src="https://upload.wikimedia.org/wikipedia/en/c/c7/Batman_Infobox.jpg";
 		}
 
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
-		
-
-    
-	let nowdate = new Date() ;
-	let nowhours = nowdate.gethours();
-	let myImage = "";
-
-    if(nowhours < 12){
-         myImage = src="https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"
-    }else{
-		myImage = src="https://upload.wikimedia.org/wikipedia/en/c/c7/Batman_Infobox.jpg"
-	}
-	document.getElementById('myimg').innerHTML = myImage;
-}
+		document.getElementById('myimg').innerHTML = myImage;
 	
 	</script>
 </body>
