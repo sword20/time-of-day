@@ -94,7 +94,6 @@
     </footer>
 	<!-- END Footer -->
 	<script>
-	{
 		let myDate = new Date();
 		let myHours = myDate.getHours();
 		let myGreeting = "";
@@ -110,11 +109,8 @@
 
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
-	}
-		$( document ).ready(function() {  
-    SetImage();
-    window.setInterval(SetImage,1000);
-});
+		
+
 
 function SetImage(){     
 	var nowdate = new Date() ;
@@ -126,7 +122,9 @@ function SetImage(){
     }else{
          $('#night').show();
          $('#day').hide();
-    }
+	}
+	$( document ).ready(function() {  
+    SetImage();
 }
 	
 	</script>
