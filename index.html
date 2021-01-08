@@ -82,7 +82,7 @@
 	 <p>There is an image with a class of FLEXIBLE which is set to a max-width equal to the size of the image.  Simutaneously the class sets the image to a percentage width, allowing the image to flex in size.  The height is not changed, as this would skew the image.</p>
 	 <p>The LIST elements inside the NAV are displayed inline by setting the display to be inline-block.  Bullets are removed by setting the UL to display</p>
 	 <p>The FOOTER includes a clear:both to keep everything above it!</p>
-	 	<img id="hour" class="time">
+	 	<img id="img" class="time">
 	  <img src="http://dummyimage.com/300x400" alt="Picture of Me!" class="flexible" />
      </main>
     <footer>
@@ -97,16 +97,17 @@
 		let myHours = myDate.getHours();
 		let myGreeting = "";
 		let myColor = "";
-		var image = document.getElementById('hour');
+		var image = document.getElementById('img');
 
 		if(myHours >12){
 		myGreeting = "Good Afternoon!";
 		myColor = "orange";
-		image.src="https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"
+		image.src="https://upload.wikimedia.org/wikipedia/en/c/c7/Batman_Infobox.jpg"
 		}else{
 		myGreeting = "Good Morning?";
 		myColor = "yellow";
-		image.src="https://upload.wikimedia.org/wikipedia/en/c/c7/Batman_Infobox.jpg"
+		image.src="https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"
+
 		}
 
 		document.getElementById('mydiv').innerHTML = myGreeting;
