@@ -109,17 +109,11 @@
 });
 
 function SetImage(){     
-    var nowdate = new Date() ;
+	let nowDate = new Date() ;
+	let nowHours = nowDate.getHours();     
+   
     
-    var waketime = new Date();     
-    waketime.setHours(6);
-    waketime.setMinutes(30);
-    
-    var bedtime = new Date();     
-    bedtime.setHours(18);
-    bedtime.setMinutes(30);
-    
-    if(waketime < nowdate  && nowdate < bedtime){
+    if(nowDate < 12){
          $('#day').show();
          $('#night').hide();
     }else{
