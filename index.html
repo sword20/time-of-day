@@ -82,8 +82,7 @@
 	 <p>There is an image with a class of FLEXIBLE which is set to a max-width equal to the size of the image.  Simutaneously the class sets the image to a percentage width, allowing the image to flex in size.  The height is not changed, as this would skew the image.</p>
 	 <p>The LIST elements inside the NAV are displayed inline by setting the display to be inline-block.  Bullets are removed by setting the UL to display</p>
 	 <p>The FOOTER includes a clear:both to keep everything above it!</p>
-	 	<img id="night" src="https://upload.wikimedia.org/wikipedia/en/c/c7/Batman_Infobox.jpg" class="time">
-		<img id="day" src="https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png" class="time">
+		 <div id="myimg">Image goes here</div>
 	  <img src="http://dummyimage.com/300x400" alt="Picture of Me!" class="flexible" />
      </main>
     <footer>
@@ -111,20 +110,17 @@
 		document.body.style.backgroundColor = myColor;
 		
 
-
-function SetImage(){     
-	var nowdate = new Date() ;
-	var nowhours = nowdate.gethours();
+    
+	let nowdate = new Date() ;
+	let nowhours = nowdate.gethours();
+	let myImage = "";
 
     if(nowhours < 12){
-         $('#day').show();
-         $('#night').hide();
+         myImage = src="https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"
     }else{
-         $('#night').show();
-         $('#day').hide();
+		myImage = src="https://upload.wikimedia.org/wikipedia/en/c/c7/Batman_Infobox.jpg"
 	}
-	$( document ).ready(function() {  
-    SetImage();
+	document.getElementById('myimg').innerHTML = myImage;
 }
 	
 	</script>
