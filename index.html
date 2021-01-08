@@ -94,12 +94,13 @@
     </footer>
 	<!-- END Footer -->
 	<script>
+	{
 		let myDate = new Date();
 		let myHours = myDate.getHours();
 		let myGreeting = "";
 		let myColor = "";
 
-		if(myHours > 12){
+		if(myHours >12){
 		myGreeting = "Good Afternoon!";
 		myColor = "orange";
 		}else{
@@ -109,7 +110,7 @@
 
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
-		
+	}
 		$( document ).ready(function() {  
     SetImage();
     window.setInterval(SetImage,1000);
