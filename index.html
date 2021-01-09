@@ -98,17 +98,23 @@
 		let myColor = "";
 		var image = document.getElementById('img');
 
-		if(myHours > 12){
-		myGreeting = "Good Afternoon!";
-		myColor = "orange";
-		image.src="https://github.com/sword20/time-of-day/blob/main/images/night.jpg?raw=true"
-		}else{
+	if(myHours < 12){
 		myGreeting = "Good Morning?";
 		myColor = "yellow";
-		image.src="https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"
-
-		}
-
+		image.src="https://github.com/sword20/time-of-day/blob/main/images/morning.jpg?raw=true"
+	}else if(myHours < 17){
+		myGreeting = "Good Afternoon!";
+		myColor = "cyan";
+		image.src="https://github.com/sword20/time-of-day/blob/main/images/afternoon.jpg?raw=true"
+	}else if(myHours < 21){
+		myGreeting = "Good Evening";
+		myColor = "orange";
+		image.src="https://github.com/sword20/time-of-day/blob/main/images/evening.jpg?raw=true"
+	}else{
+		myGreeting = "Good Night!";
+		myColor = "blue";
+		image.src="https://github.com/sword20/time-of-day/blob/main/images/night.jpg?raw=true"
+	}
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
 		
