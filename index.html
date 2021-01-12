@@ -77,7 +77,7 @@
 	</header>
     <main>
 	 <header><h3>An IT 121 Assignment by Emmanuel Sword</h3></header>
-	 <div id="mydiv">Greeting goes here</div>
+	 <div id="mydiv">Greeting goes here</div> Happy <span id="myDay">Day of Week goes here</span>
 	 <p>This HTML5 Flexible template could be a good starting point for some of your projects.  The template file starts by setting a background color on the HTML element, and setting max-width on the body, which is styled like a wrapper.  The BODY element is also set to a percentage width so it leaves a bit of HTML color until it shrinks in size toward the mobile view.</p>
 	 <p>There is an image with a class of FLEXIBLE which is set to a max-width equal to the size of the image.  Simutaneously the class sets the image to a percentage width, allowing the image to flex in size.  The height is not changed, as this would skew the image.</p>
 	 <p>The LIST elements inside the NAV are displayed inline by setting the display to be inline-block.  Bullets are removed by setting the UL to display</p>
@@ -85,7 +85,7 @@
 	  <img img id="img" alt="Time of Day Image" class="flexible" />
      </main>
     <footer>
-      <small>&copy; <span id="myYear">Year goes here</span>, All Rights Reserved ~
+      <small>&copy; 2013-<span id="myYear">Year goes here</span>, All Rights Reserved ~
       <a href="https://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~
       <a href="https://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
       </small>
@@ -98,17 +98,27 @@
 		let myColor = "";
 		let myYear = myDate.getFullYear();
 		var image = document.getElementById('img');
+		var weekday = new Array(7);
+			weekday[0] = "Sunday";
+			weekday[1] = "Monday";
+			weekday[2] = "Tuesday";
+			weekday[3] = "Wednesday";
+			weekday[4] = "Thursday";
+			weekday[5] = "Friday";
+			weekday[6] = "Saturday"
+		var myDay = weekday[myDate.getDay()];
+		
 
 	if(myHours >= 5 && myHours <12){
-		myGreeting = "Good Morning?";
+		myGreeting = "Good Morning!";
 		myColor = "yellow";
 		image.src="https://github.com/sword20/time-of-day/blob/main/images/morning.jpg?raw=true"
 	}else if(myHours >= 12  && myHours <18){
 		myGreeting = "Good Afternoon!";
 		myColor = "cyan";
 		image.src="https://github.com/sword20/time-of-day/blob/main/images/afternoon.jpg?raw=true"
-	}else if(myHours >= 18 && myHours <21){
-		myGreeting = "Good Evening";
+	}else if(myHours >= 18 && myHours <23){
+		myGreeting = "Good Evening!";
 		myColor = "orange";
 		image.src="https://github.com/sword20/time-of-day/blob/main/images/evening.jpg?raw=true"
 	}else{
@@ -120,6 +130,7 @@
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
 		document.getElementById('myYear').innerHTML = myYear;
+		document.getElementById('myDay').innerHTML = myDay;
 		
 	
 	</script>
