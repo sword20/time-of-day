@@ -82,10 +82,10 @@
 	 <p>There is an image with a class of FLEXIBLE which is set to a max-width equal to the size of the image.  Simutaneously the class sets the image to a percentage width, allowing the image to flex in size.  The height is not changed, as this would skew the image.</p>
 	 <p>The LIST elements inside the NAV are displayed inline by setting the display to be inline-block.  Bullets are removed by setting the UL to display</p>
 	 <p>The FOOTER includes a clear:both to keep everything above it!</p>
-	  <img img id="img" alt="Picture of Me!" class="flexible" />
+	  <img img id="img" alt="Time of Day Image" class="flexible" />
      </main>
     <footer>
-      <small>&copy; 2013, All Rights Reserved ~
+      <small>&copy;<span id="myYear">Year goes here</span>, All Rights Reserved ~
       <a href="https://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~
       <a href="https://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
       </small>
@@ -96,6 +96,7 @@
 		let myHours = myDate.getHours();
 		let myGreeting = "";
 		let myColor = "";
+		let myYear = myDate.getFullYear();
 		var image = document.getElementById('img');
 
 	if(myHours >= 5 && myHours <12){
@@ -118,6 +119,7 @@
 
 		document.getElementById('mydiv').innerHTML = myGreeting;
 		document.body.style.backgroundColor = myColor;
+		document.getElementById('myYear').innerHTML = myYear;
 		
 	
 	</script>
